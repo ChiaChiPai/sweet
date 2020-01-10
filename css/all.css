@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -16781,11 +16782,13 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 body {
-  font-family: "PingFang TC";
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "PingFang TC", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /*3. 備援字體*/
   color: #3f5d45;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6, p {
   margin-bottom: 0;
 }
 
@@ -16895,12 +16898,6 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: -20px;
     margin-bottom: -20px;
   }
-}
-
-.section .writing-vertical {
-  -webkit-writing-mode: vertical-rl;
-      -ms-writing-mode: tb-rl;
-          writing-mode: vertical-rl;
 }
 
 @media (min-width: 768px) {
@@ -17043,11 +17040,6 @@ h1, h2, h3, h4, h5, h6 {
   .text-md-light {
     color: #EAF0ED !important;
   }
-}
-
-.negative-row-margin {
-  margin-left: -15px;
-  margin-right: -15px;
 }
 
 .cart-img {

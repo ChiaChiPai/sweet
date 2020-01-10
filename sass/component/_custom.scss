@@ -1,24 +1,6 @@
-body {
-  font-family: "PingFang TC";
-  color: #3f5d45;
-}
-h1,h2,h3,h4,h5,h6{
-  margin-bottom: 0;
-}
-// 通用
-.bg-cover {
-  background-size: cover;
-  background-position: center center;
-}
 
-.text-hide {
-  text-indent: 110%;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-//專用
 //index
+//毛玻璃效果
 .frosted-wrap {
   margin-top: -70px;
   height: 256px;
@@ -77,6 +59,7 @@ h1,h2,h3,h4,h5,h6{
   }
 }
 
+//文字橫直切換
 .section {
   .vertical-content {
     max-height: 420px;
@@ -93,10 +76,6 @@ h1,h2,h3,h4,h5,h6{
     }
   }
 
-  .writing-vertical {
-    writing-mode: vertical-rl;
-  }
-
   .writing-md-vertical {
     @include media-breakpoint-up(md) {
       writing-mode: vertical-rl;
@@ -104,8 +83,9 @@ h1,h2,h3,h4,h5,h6{
   }
 }
 
+
+//產品列表
 .item-card {
-  
   .item-img {
     width: 100%;
     height: 315px;
@@ -155,6 +135,8 @@ h1,h2,h3,h4,h5,h6{
     }
     
   }
+
+//訂閱
 .subscribe{
   .subscribe-text{
     font-size: 1.5rem;
@@ -180,6 +162,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 //product
+
 //login
 .custom-form-icon{
   position: absolute;
@@ -204,17 +187,14 @@ h1,h2,h3,h4,h5,h6{
   }
 }
 
-.negative-row-margin{
-  margin-left: -15px;
-  margin-right: -15px;
-}
 
+
+//check
 .cart-img{
   width:120px;
   min-height: 80px;
 }
 
-//check
 .process-step{
   display: flex;
   position: relative;

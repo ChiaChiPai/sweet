@@ -5,4 +5,6 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 //custom
-@import "component/BS4custom"
+@import "component/base";
+@import "component/utility";
+@import "component/custom";

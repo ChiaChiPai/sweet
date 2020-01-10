@@ -1,0 +1,11 @@
+//base
+body {
+    font-family: -apple-system, BlinkMacSystemFont, /*1. 系統預設字體*/
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",/*2. 指定已知的系統 UI 字體*/
+    "PingFang TC", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /*3. 備援字體*/
+    color: #3f5d45;
+}
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6, p{
+    margin-bottom: 0;
+}
