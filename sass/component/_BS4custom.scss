@@ -1,0 +1,313 @@
+body {
+  font-family: "PingFang TC";
+  color: #3f5d45;
+}
+h1,h2,h3,h4,h5,h6{
+  margin-bottom: 0;
+}
+// 通用
+.bg-cover {
+  background-size: cover;
+  background-position: center center;
+}
+
+.text-hide {
+  text-indent: 110%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+//專用
+//index
+.frosted-wrap {
+  margin-top: -70px;
+  height: 256px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  writing-mode: vertical-lr;
+  color: white;
+  transition: color 1s;
+  &::after {
+    content: " ";
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    background-color: rgba(theme-color("primary"), 0.8);
+    z-index: -1;
+    transition: background-color 0.5s;
+  }
+  &:hover::after,
+  &:focus::after,
+  &.active::after {
+    content: "";
+    background-color: rgba(theme-color("warning"), 0.8);
+  }
+  &:hover,
+  &:focus,
+  &.active {
+    color: $primary;
+    text-decoration: none;
+  }
+  &:hover .frosted-img,
+  &:focus .frosted-img,
+  &.active .frosted-img {
+    filter: blur(0px);
+  }
+  .frosted-img {
+    position: absolute;
+    top: -10px;
+    bottom: -10px;
+    left: -10px;
+    right: -10px;
+    z-index: -2;
+    transition: filter 0.5s;
+    filter: blur(10px);
+  }
+  .frosted-text {
+    font-size: 24px;
+    letter-spacing: 10px;
+    font-weight: bold;
+  }
+}
+
+.section {
+  .vertical-content {
+    max-height: 420px;
+    line-height: 2;
+    @include media-breakpoint-up(md) {
+      line-height: 2.2;
+    }
+  }
+  .index-img-block {
+    min-height: 250px;
+    @include media-breakpoint-up(md) {
+      margin-top: -20px;
+      margin-bottom: -20px;
+    }
+  }
+
+  .writing-vertical {
+    writing-mode: vertical-rl;
+  }
+
+  .writing-md-vertical {
+    @include media-breakpoint-up(md) {
+      writing-mode: vertical-rl;
+    }
+  }
+}
+
+.item-card {
+  
+  .item-img {
+    width: 100%;
+    height: 315px;
+    position: relative; 
+  }
+
+  .item-badge{
+    position: absolute;
+    writing-mode: vertical-rl;
+    top:0;
+    left: 20px;
+    padding: 10px;
+    background-color: $primary;
+    color:$white;
+    letter-spacing: 5px;
+  }
+
+  .item-border {
+    border: 1px solid $light;
+  }
+
+  .item-name {
+    border-right: 1px solid $light;
+    padding: 1rem;
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+
+  .item-price {
+    padding: 1rem;
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+
+  .item-btn {
+    color: $primary;
+    width: 100%;
+    border: 0;
+    padding: 1rem;
+    font-size: 1.5rem;
+  }
+  .item-icon{
+    position: absolute;
+    top:19px;
+    right: 22px;
+    cursor: pointer;
+    }
+    
+  }
+.subscribe{
+  .subscribe-text{
+    font-size: 1.5rem;
+    color: white;
+    margin-left: 1.25rem;
+  }
+  .subscribe-search{
+    height: 56px;
+    text-indent: 3rem;
+  }
+  .subscribe-icon-mail{
+    position: absolute;
+    top:1rem;
+    left: 1.25rem;
+    z-index: 20;
+  }
+  .subscribe-search-btn{
+    padding: 1rem 1.25rem;
+  }
+  .subscribe-icon-arrow{
+    font-size: 1rem;
+  }
+}
+
+//product
+//login
+.custom-form-icon{
+  position: absolute;
+  top: 1rem;
+  left: 1.25rem;
+}
+
+.btn-white-light{
+  @include button-variant(white,$light);
+}
+// 只能帶入已宣告的變數，直接帶入顏色#12313不行
+// shopcart
+.bg-md-primary{
+  @include media-breakpoint-up(md) {
+    background-color: $primary !important;
+  }
+}
+
+.text-md-light{
+  @include media-breakpoint-up(md) {
+    color: $light  !important;
+  }
+}
+
+.negative-row-margin{
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.cart-img{
+  width:120px;
+  min-height: 80px;
+}
+
+//check
+.process-step{
+  display: flex;
+  position: relative;
+  .step-circle{
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border:1px solid $light;  
+  background-color: $primary;
+  z-index: 2;
+  }
+  
+  .step-circle-white{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: $white;
+    z-index: 2;
+    .material-icons{
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      font-size: 24px;
+      z-index: 3;
+    }
+  }
+
+
+    
+
+  .active::after{
+    content:'';
+    position: absolute;
+    height: 14px;
+    width: 14px;
+    background-color: $light;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 3;
+  }
+  &.line::after{
+    content: '';
+    position: absolute;
+    background-color: $light;
+    width: 100%;
+    height: 1px;
+    top:9.5px;
+    left: 0;
+    z-index: 1;
+  }
+  &.line-dark{
+    .material-icons{
+      z-index: 2;
+    }
+    &::after{
+    content: '';
+    position: absolute;
+    background-color: $primary;
+    width: 90%;
+    height: 1px;
+    top:50%;
+    left: 10px;
+    z-index: 1;
+    }
+  }
+  
+  .step-circle.done{
+    .material-icons{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      font-size: 1.1rem;
+      z-index: 3;
+      transform: translate(-50%,-50%);
+    }
+    
+  }
+}
+
+.nav-tabs {
+  .nav-link.btn-voice {
+    background-color: $primary;
+    color: $light;
+    border-color: $light;
+  }
+
+  .nav-link.btn-voice.active{
+    color: $primary;
+    background-color: $light;
+  }
+  border: 0;
+}
